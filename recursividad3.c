@@ -1,38 +1,35 @@
-#include<stdio.h>
+//quiero que este programa elija un numero aleatorio (entre un rango) y luego imprima los numeros en orden ascendente desde 1 hasta el numero.
 
-int numeros(int n);
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+
+int sol(int random);
+
 
 int main(){
-	
-	int num=12;
-	
 
-printf("numerito: %d", numeros(num));
+    srand(time(NULL));
+    int random = rand()%11;
 
-return 0;
+    printf("su numero, %d \n", random);
+
+    printf("%d \n", sol(random));
+
+return 0;}
+
+
+
+int sol(int random){
+
+if(random == 0){
+
+    return 0;
+}else {
+
+    printf("%d \n", random);
 }
 
-int numeros(int n){
-	int an;
-	
-	int i;
-	
-	if(i>0){
-		
-	
-		
-		for(i=0; 1<n ;i--){
-			
-			an = numeros(n-1);
-		}
-	
-	}else{
-		
-		
-	return 0;
-	
-	}
-	
-	
-return an;
-}
+
+return sol(random-1);}
