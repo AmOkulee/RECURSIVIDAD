@@ -28,8 +28,6 @@ int potencia(int n, int elev){
 }
 
 //potencia de un numero con recursividad
-#include<stdio.h>
-
 int potencia(int n,int elv);
 
 int main(){
@@ -44,11 +42,18 @@ return 0;
 
 int potencia(int n, int elev){
 	
+	int solucion=1;
+	
 	if(elev ==0){
 		
 	return 1;
 		
 	}
 	
-	return n * potencia(n, elev-1);	
+	solucion = n * potencia(n, elev-1);
+	
+	return 	solucion;
+	//return n * potencia(n, elev - 1); y me ahorro poner la variable solucion
 }
+
+
