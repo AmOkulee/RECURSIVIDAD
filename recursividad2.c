@@ -1,3 +1,4 @@
+//potencia de un numero sin recursividad
 #include<stdio.h>
 
 int potencia(int n,int elv);
@@ -22,7 +23,32 @@ int potencia(int n, int elev){
 	sol *= n;
 	
 	i++; 
-}
+       }
 	return sol;
+}
+
+//potencia de un numero con recursividad
+#include<stdio.h>
+
+int potencia(int n,int elv);
+
+int main(){
+	int num=2;
+	int pot=3; 
+		
+	printf("tonce: el num: %d, elevado a: %d, es igual a: %d", num,pot, potencia(num, pot));
 	
+return 0;
+}
+
+
+int potencia(int n, int elev){
+	
+	if(elev ==0){
+		
+	return 1;
+		
+	}
+	
+	return n * potencia(n, elev-1);	
 }
